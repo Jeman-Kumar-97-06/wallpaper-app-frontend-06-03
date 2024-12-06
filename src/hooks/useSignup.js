@@ -9,7 +9,7 @@ export const useSignup = () => {
     const signup = async (name,email,password) => {
         setIsloading(true);
         setError(null);
-        const resp = await fetch('/api/users/signup',{method:"POST",
+        const resp = await fetch('https://wallpaper-app-backend.onrender.com/api/users/signup',{method:"POST",
                                                       headers:{"Content-Type":"application/json"},
                                                       body:JSON.stringify({name,email,password})
                                                       });

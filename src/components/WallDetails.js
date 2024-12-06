@@ -11,7 +11,7 @@ const WallDetails = ({wall}) => {
             setError("You must be logged in :(");
             return;
         }
-        const resp = await fetch('/api/walls/download/'+wall._id,{headers:{'Authorization':`Bearer ${user.token}`}});
+        const resp = await fetch('https://wallpaper-app-backend.onrender.com/api/walls/download/'+wall._id,{headers:{'Authorization':`Bearer ${user.token}`}});
         const blob = await resp.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');

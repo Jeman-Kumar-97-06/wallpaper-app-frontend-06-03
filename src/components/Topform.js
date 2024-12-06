@@ -16,7 +16,7 @@ const Topform = () => {
         const fileInput = document.getElementById('wall_pic').files[0];
         const formData  = new FormData();
         formData.append('wall_pic',fileInput);
-        const response = await fetch('/api/walls/',{method:'POST',body:formData,headers:{'Authorization':`Beared ${user.token}`}});
+        const response = await fetch('https://wallpaper-app-backend.onrender.com/api/walls/',{method:'POST',body:formData,headers:{'Authorization':`Beared ${user.token}`}});
         const json     = await response.json();
         if (!response.ok){
             setError(json.error);

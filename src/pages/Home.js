@@ -9,7 +9,7 @@ const Home = () => {
 
     useEffect(()=>{
         const fetchAllWalls = async () => {
-            const resp  = await fetch('/api/walls/',{headers:{"Authorization":`Bearer ${user.token}`}});
+            const resp  = await fetch('https://wallpaper-app-backend.onrender.com/api/walls/',{headers:{"Authorization":`Bearer ${user.token}`}});
             const walls = await resp.json();
             if (resp.ok)  {
                 dispatch({type:"SET_WALLS",payload:walls})
