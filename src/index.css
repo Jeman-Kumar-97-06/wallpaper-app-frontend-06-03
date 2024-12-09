@@ -92,6 +92,19 @@ code {
   cursor: pointer;
 }
 
+.login_page,.signup_div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  justify-content: space-evenly;
+}
+
+.login_page button, .signup_div button{
+  width: 50px;
+}
+
 @media only screen and (max-width:400px){
   #upload_form{
     width:200px;
